@@ -6,7 +6,7 @@ getRepoContributors("lighthouse-labs", "laser_shark", downloadByURL);
 
 
 function getRepoContributors(repoOwner, repoName, cb) {
-  var endpoint = 'https://api.github.com/repos/' + repoOwner + '/' + repoName + "/contributors?access_token=f8b6234339b00d1b44045f1a46902289a689cf0a"
+  var endpoint = 'https://api.github.com/repos/' + repoOwner + '/' + repoName + "/contributors?access_token="
   var options = {
     url: endpoint,
     method: 'GET',
