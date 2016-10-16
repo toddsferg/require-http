@@ -1,8 +1,7 @@
 var request = require('request');
 var fs = require('fs');
 var myArgs = process.argv.slice(2);
-//getRepoContributors(myArgs[0], myArgs[1], downloadByURL);
-getRepoContributors("lighthouse-labs", "laser_shark", downloadByURL);
+
 
 
 function getRepoContributors(repoOwner, repoName, cb) {
@@ -25,3 +24,5 @@ function getRepoContributors(repoOwner, repoName, cb) {
 function downloadByURL(url,filePath){
   request(url).pipe(fs.createWriteStream(filePath));
 }
+
+getRepoContributors("lighthouse-labs", "laser_shark", downloadByURL);
